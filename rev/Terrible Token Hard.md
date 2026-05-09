@@ -47,12 +47,12 @@ No symbol table is loaded.  Use the "file" command.
 
 scrambled binary
 
-![[img/Pasted image 20260508212027.png]]
+![img/Pasted image 20260508212027.png](img/Pasted image 20260508212027.png)
 
 IDA clean everything up anyway (yay), so we just need to read the source
 It seems that the hard version does the exact same thing, just with a different key
 double click the variable "aUmjpc" to see the key
 
-![[img/Pasted image 20260508212438.png]]
+![img/Pasted image 20260508212438.png](img/Pasted image 20260508212438.png)
 
 so our key is "umjpc"
