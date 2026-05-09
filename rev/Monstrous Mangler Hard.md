@@ -1,6 +1,6 @@
-![[Pasted image 20260509075838.png]]
-![[Pasted image 20260509075851.png]]
-![[Pasted image 20260509080438.png]]
+![[img/Pasted image 20260509075838.png]]
+![[img/Pasted image 20260509075851.png]]
+![[img/Pasted image 20260509080438.png]]
 
 Woah thats longer than usual
 So the flow here is:
