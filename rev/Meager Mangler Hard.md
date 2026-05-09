@@ -79,6 +79,8 @@ warning: 43     ../sysdeps/x86_64/multiarch/memcmp-sse4.S: No such file or direc
 
 well run in debug and check rsi and rdi value at memcmp (AMD64 use registers rsi and rdi as 2 argument for memcmp), we realise that the pseudo code ida produce is probably false (thats rare)
 not only that, the final value (at rsi) is false too (it supposed to be 58... or something according to ida)
+
 xor "8949dc4fda4dd8438e198c1f8a4a8813" with "bf2bbf2bbf2bbf2bbf2bbf2bbf2bbf2b" produce "36626364656667683132333435613738", which is "6bcdefgh12345a78"
 with to this logic we can reverse the intended key
+
 the intended key is "626A777775656C6863636B7763766F73", which is, conveniently, "bjwwuelhcckwcvos"
