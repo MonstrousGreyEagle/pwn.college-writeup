@@ -3,10 +3,12 @@
 ![img/Pasted-image-20260509080438.png](img/Pasted-image-20260509080438.png)
 
 Woah thats longer than usual
+
 So the flow here is:
 ```
 input -> reverse -> twisted_bubble_sort -> swap byte 2 and 3 -> 3x reverse -> twisted_bubble sort
 ```
+
 twisted is the keyword here, as the range shrink everytime a new character is iterated
 a regular bubble sort should be something like:
 ```

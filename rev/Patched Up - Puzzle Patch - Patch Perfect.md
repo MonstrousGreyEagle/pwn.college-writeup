@@ -1,5 +1,6 @@
 so the reason i put all these 3 into a same write up is because their solution is kind of the same
 to check the key for the flag, memcmp is called to compare 2 strings
+
 memcmp in c will translate into:
 ```
 [thingsnobodycareabout]
@@ -16,7 +17,9 @@ in comparison, je is
 74 [jumpaddress]
 ```
 so by changing the first byte from 75 to 74, the problems are basically solved
+
 patch perfect actually differ from the others a little bit because it also check the intergrity of the file, but its actually just another memcmp so we can just do the same thing
+
 example:
 ```
 hacker@reverse-engineering~patch-perfect-easy:/challenge$ gdb *

@@ -1,4 +1,5 @@
 So this is the same thing as with Terrible Token Hard: no output, scrambled binary
+
 Lets jump right into the main stuff
 
 ![img/Pasted-image-20260508213619.png](img/Pasted-image-20260508213619.png)
