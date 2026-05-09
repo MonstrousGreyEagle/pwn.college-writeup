@@ -1,4 +1,4 @@
-![img/Pasted image 20260508220405.png](img/Pasted image 20260508220405.png)
+![img/Pasted-image 20260508220405.png](img/Pasted-image 20260508220405.png)
 
 Now we have a somewhat complicated transformation
 The right key is literally showed in strcpy
