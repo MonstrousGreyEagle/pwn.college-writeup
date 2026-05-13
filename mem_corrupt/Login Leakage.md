@@ -7,4 +7,6 @@ Our stack pointer points to 0x7fffd7706f40, and our base pointer points to 0x7ff
 ```
 
 inspecting the data at address 0x7fffd7707545
-![img/Login-Leakage-1778680709898.png](img/Login-Leakage-1778680709898.png)
+![img/Login-Leakage-1778680709898.webp](img/Login-Leakage-1778680709898.webp)
+
+we found that the password is 9 bytes long
