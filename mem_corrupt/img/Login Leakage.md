@@ -7,4 +7,4 @@ Our stack pointer points to 0x7fffd7706f40, and our base pointer points to 0x7ff
 ```
 
 inspecting the data at address 0x7fffd7707545
-![[Login Leakage-1778680709898.webp]]
+![[../Login Leakage-1778680709898.webp]]
