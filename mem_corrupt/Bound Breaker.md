@@ -1,4 +1,4 @@
-![](./Bound%20Breaker-1778742247503.webp)
+![](img/Bound%20Breaker-1778742247503.webp)
 
 the program gave us all the address we need, the only problem is that we cant really reach >55 bytes without some tricks
 
@@ -11,7 +11,7 @@ aaaa
 You sent 5 bytes!
 ```
 
-now, some python code is suffice to finish off the challenge
+now, some python code is sufficent to finish off the challenge
 ```
 #!/usr/bin/python3
 import sys
