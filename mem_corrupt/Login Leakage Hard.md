@@ -1,0 +1,1 @@
+now the program give no infomation on startup
