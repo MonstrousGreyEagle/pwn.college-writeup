@@ -1,4 +1,5 @@
 So now we have a Pie binary, and a canary
+Checking the binary, a convenient backdoor is 
 ```
 #!/usr/bin/python3
 from pwn import *
