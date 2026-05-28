@@ -1,7 +1,7 @@
 So now we have a Pie binary, and a canary
 Checking the binary, a convenient backdoor is prepared for us to leak the canary, and anything in between our canary and the designated return address
 ![](./Recursive%20Ruin%20Hard-1779949947818.webp)
-
+Using pwndbg, we can inspect to get the location of the return address
 ```
 #!/usr/bin/python3
 from pwn import *
