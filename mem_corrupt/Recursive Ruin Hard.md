@@ -7,7 +7,8 @@ Before repeat:
 After repeat:
 ![](./Recursive%20Ruin%20Hard-1779950148569.webp)
 Checking the 3rd entry we can conclude that its the return address
-The 2nd address is 
+The 2nd address is a library address (because of weird paging relative to main), which we need to not break during the operation
+That leave us with 2 things to leak: the lib addr, and canary
 ```
 #!/usr/bin/python3
 from pwn import *
