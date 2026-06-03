@@ -1,3 +1,6 @@
+![](./Lingering%20Leftover-1780487207721.webp)
+the output is limited, just before the canary, so we are not leaking anything
+i
 ```
 #!/usr/bin/python3
 from pwn import *
