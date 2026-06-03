@@ -1,6 +1,6 @@
-
 ![](img/Now%20you%20got%20it-1780479751238.webp)
-![](./Now%20you%20got%20it-1780479960705.webp)
+so
+![](img/Now%20you%20got%20it-1780479960705.webp)
 ```
 #!/usr/bin/python3 
 from pwn import * 
