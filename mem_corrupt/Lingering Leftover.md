@@ -1,6 +1,10 @@
 ![](./Lingering%20Leftover-1780487207721.webp)
 the output is limited, just before the canary, so we are not leaking anything
-i
+![](./Lingering%20Leftover-1780487272009.webp)
+looking in main, we see a pretty suspicious function (verify_flag)
+![](./Lingering%20Leftover-1780487313852.webp)
+seems like it read the flag into memory
+
 ```
 #!/usr/bin/python3
 from pwn import *
