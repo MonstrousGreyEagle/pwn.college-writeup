@@ -2,7 +2,7 @@
 so we can edit the stack, which include the got (global offset table), which conveniently, contain
 ![](img/Now%20you%20got%20it-1780479960705.webp)
 also we got the win location
-now we just need to replace some function address with th
+now we just need to replace some function address with the win address, which, in this case, i chose printf
 ```
 #!/usr/bin/python3 
 from pwn import * 
