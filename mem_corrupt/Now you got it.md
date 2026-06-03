@@ -1,7 +1,8 @@
 ![](./Now%20you%20got%20it-1780480046312.webp)
 so we can edit the stack, which include the got (global offset table), which conveniently, contain
 ![](img/Now%20you%20got%20it-1780479960705.webp)
-
+also we got the win location
+now we just need to replace some function address with th
 ```
 #!/usr/bin/python3 
 from pwn import * 
