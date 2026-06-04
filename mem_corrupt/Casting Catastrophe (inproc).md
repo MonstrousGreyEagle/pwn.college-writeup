@@ -7,5 +7,9 @@ however, the binary does a check after our input to make sure that v8 * v9 <= 0x
 looking at v8, v9 and nbytes we discover that v8 and v9 are unsigned intergers, and nbyte is unsigned int64
 with this information, we can technically overflow v8 * v9 while not overflowing nbyte, as uint limit is 2 ^ 32 and uint64 limit is 2 ^ 64
 for example we can do it with something like
-2
-2147483649
+```
+Number of payload records to send: 2
+Size of each payload record: 2147483649
+Computed total payload size: 4294967298
+```
+which, 
