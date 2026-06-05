@@ -1,10 +1,17 @@
 ![](img/Canary%20Conundrum%20Hard%20(inproc)-1780625729145.webp)
+
 inspecting the pseudo code, we acknowledge that no win function exist
+
 ![](img/Canary%20Conundrum%20Hard%20(inproc)-1780625805533.webp)
+
 checking the vmmap, we realised that the stack has execute priviledge
+
 with that in mind, the objective of the task is to spawn a shell by pointing the return address back to our input
+
 ![](img/Canary%20Conundrum%20Hard%20(inproc)-1780626482996.webp)
+
 note that partial overwrite wont be sufficient for this task, as the return adress base is very far from the stack base. Instead, we also need to leak the data at rbp, which is the old rbp address, to acquire the stack base
+
 ```
 #!/usr/bin/python3
 

@@ -22,8 +22,11 @@ mov rax, 0x3b
 syscall
 """)
 ```
+
 looking at the old code, we acknowledge that we wasted space for 'mov' instead of 'push' and 'pop'
+
 fixing that a bit and we can fit a neatly 0x28 bytes code that spawn a shell and letting us read the flag manually
+
 ```
 #!/usr/bin/python3
 
