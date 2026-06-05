@@ -1,6 +1,8 @@
 ![](img/Pointer%20Problems-1780479450320.webp)
+
 the program give us the location of the flag, and the location of the print address
 just replace the char* at the given address with the address of the flag
+
 ```
 #!/usr/bin/python3 
 from pwn import * 
