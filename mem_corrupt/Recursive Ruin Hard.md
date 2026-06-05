@@ -3,14 +3,22 @@ So now we have a Pie binary, and a canary
 Checking the binary, a convenient backdoor is prepared for us to leak the canary, and anything in between our canary and the designated return address
 
 ![](img/Recursive%20Ruin%20Hard-1779949947818.webp)
+
 Using pwndbg, we can inspect to get the location of the return address
 Before repeat:
+
 ![](img/Recursive%20Ruin%20Hard-1779950140387.webp)
+
 After repeat:
+
 ![](img/Recursive%20Ruin%20Hard-1779950148569.webp)
+
 Checking the 3rd entry we can conclude that its the return address
+
 The 2nd address is a library address (because of weird paging relative to main), which we need to not break during the operation
+
 That leave us with 2 things to leak: the lib addr, and canary
+
 ```
 #!/usr/bin/python3
 from pwn import *
