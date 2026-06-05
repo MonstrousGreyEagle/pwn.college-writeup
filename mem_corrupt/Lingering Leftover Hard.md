@@ -1,13 +1,23 @@
 ![](img/Lingering%20Leftover-1780487207721.webp)
+
 the output is limited, just before the canary, so we are not leaking anything
+
 ![](img/Lingering%20Leftover-1780487272009.webp)
+
 looking in main, we see a pretty suspicious function (verify_flag)
+
 ![](img/Lingering%20Leftover-1780487313852.webp)
+
 seems like it read the flag into memory
+
 ![](img/Lingering%20Leftover-1780487464785.webp)
+
 looking at the stack, we find some pretty suspicious data (address are supposed to be 6 bytes)
+
 ![](img/Lingering%20Leftover-1780487504556.webp)
+
 further inspection show that the flag is actually written in the memory after the input (note that FAKE_FLAG is the content of my local /flag)
+
 ```
 #!/usr/bin/python3
 from pwn import *
