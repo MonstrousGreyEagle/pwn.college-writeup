@@ -18,3 +18,4 @@ mov rax, 0x3b
 syscall
 """)
 ```
+looking at the old code, we acknowledge that we wasted space for 'mov' instead 
