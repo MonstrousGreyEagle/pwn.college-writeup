@@ -1,5 +1,5 @@
-![](./A%20Crafty%20Clobber%20Hard-1780626858877.webp)
-![](./A%20Crafty%20Clobber%20Hard-1780626979558.webp)
+![](img/A%20Crafty%20Clobber%20Hard-1780626858877.webp)
+![](img/A%20Crafty%20Clobber%20Hard-1780626979558.webp)
 inspecting the pseudo code and the vmmap, we acknowledge that this challenge is a copy of [Canary Conundrum Hard](Canary%20Conundrum%20Hard.md) with an extra checker at the end
 this means 2 things:
 	1. The solution is almost the same as [Canary Conundrum Hard](Canary%20Conundrum%20Hard.md)
@@ -19,7 +19,7 @@ syscall
 """)
 ```
 looking at the old code, we acknowledge that we wasted space for 'mov' instead of 'push' and 'pop'
-fixing that a bit and we can fit a neatly 0x28 bytes code that spawn a shell and letting us read the flag
+fixing that a bit and we can fit a neatly 0x28 bytes code that spawn a shell and letting us read the flag manually
 ```
 #!/usr/bin/python3
 
