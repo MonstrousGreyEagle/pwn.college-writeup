@@ -1,0 +1,1 @@
+![](./Chain%20Of%20Command%20Hard-1780651709693.webp)
