@@ -1,0 +1,1 @@
+![](./Stop%20Pop%20And%20Rop%20Hard-1780709023611.webp)
